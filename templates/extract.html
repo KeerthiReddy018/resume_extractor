@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Extraction System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="page">
+
+  <header class="masthead">
+    <a href="/" class="masthead__back">
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M9.5 3 4.5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Home
+    </a>
+    <div class="masthead__top">
+      <div class="masthead__mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none">
+          <rect x="1" y="1" width="38" height="38" rx="7" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M12 14h16M12 20h16M12 26h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="masthead__text">
+        <h1>Resume Extraction System</h1>
+        <p>Structured candidate data from PDF and DOCX resumes &mdash; parsed locally.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+
+    <!-- LEFT: Upload column -->
+    <section class="panel panel--upload">
+      <div class="panel__eyebrow">
+        <span class="panel__index">01</span>
+        <h2 class="panel__title">Upload resumes</h2>
+      </div>
+
+      <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Upload resumes">
+        <div class="dropzone__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M24 6v24m0-24 9 9m-9-9-9 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 32v6a4 4 0 0 0 4 4h24a4 4 0 0 0 4-4v-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="dropzone__primary">Drop resumes here</p>
+        <p class="dropzone__secondary">or click to browse &middot; PDF or DOCX &middot; up to 10 files</p>
+        <input type="file" id="fileInput" accept=".pdf,.docx" multiple hidden>
+      </div>
+
+      <ul id="fileList" class="file-list"></ul>
+
+      <button id="extractBtn" class="btn btn--primary" disabled>
+        <span class="btn__label">Extract information</span>
+        <span class="btn__spinner" aria-hidden="true"></span>
+      </button>
+
+      <div id="statusLine" class="status-line" aria-live="polite"></div>
+    </section>
+
+    <!-- RIGHT: Results column -->
+    <section class="panel panel--results">
+      <div class="panel__header-row">
+        <div class="panel__eyebrow">
+          <span class="panel__index">02</span>
+          <h2 class="panel__title">Extracted data</h2>
+        </div>
+        <div class="view-toggle" id="viewToggle" hidden>
+          <button class="view-toggle__btn is-active" data-view="cards">Cards</button>
+          <button class="view-toggle__btn" data-view="json">JSON</button>
+        </div>
+      </div>
+
+      <div id="resultsEmpty" class="empty-state">
+        <svg viewBox="0 0 64 64" fill="none" aria-hidden="true" class="empty-state__icon">
+          <rect x="14" y="8" width="36" height="48" rx="3" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="26" cy="24" r="5" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M18 42c1.5-6 6-9 8-9s6.5 3 8 9M38 20h6M38 27h6M22 42h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <p>Nothing extracted yet</p>
+        <p class="empty-state__sub">Upload one or more resumes on the left to see structured results here.</p>
+      </div>
+
+      <div id="resultsTabs" class="results-tabs" hidden></div>
+
+      <div id="resultsBody" class="results-body"></div>
+
+      <button id="downloadAllBtn" class="btn btn--secondary" hidden>
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3v9m0 0 3.5-3.5M10 12l-3.5-3.5M4 14.5v1a1.5 1.5 0 0 0 1.5 1.5h9a1.5 1.5 0 0 0 1.5-1.5v-1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Download all results (JSON)
+      </button>
+    </section>
+
+  </main>
+
+  <footer class="foot-note">
+    <span>Rule-based extraction &mdash; regex, section detection &amp; a skills dictionary.</span>
+  </footer>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

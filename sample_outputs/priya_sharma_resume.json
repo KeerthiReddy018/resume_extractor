@@ -1,0 +1,47 @@
+{
+  "name": "Priya Sharma",
+  "email": "priya.sharma88@gmail.com",
+  "phone": "+91 9876543210",
+  "skills": [
+    "AWS",
+    "Django",
+    "Docker",
+    "Git",
+    "JavaScript",
+    "Node.js",
+    "PostgreSQL",
+    "Python",
+    "REST API",
+    "React"
+  ],
+  "education": [
+    {
+      "degree": "B.Tech in Computer Science",
+      "institution": "Indian Institute of Technology, Bombay",
+      "year": "2016"
+    }
+  ],
+  "experience": [
+    {
+      "role_or_header": "Senior Software Engineer, Tribera.ai (2022 - Present)",
+      "details": [
+        "Led development of the company's core resume parsing microservice",
+        "Reduced API latency by 40% through caching and query optimization"
+      ]
+    },
+    {
+      "role_or_header": "Software Engineer, InfoTech Solutions (2020 - 2022)",
+      "details": [
+        "Built REST APIs used by over 50,000 daily active users",
+        "Mentored 2 junior engineers"
+      ]
+    }
+  ],
+  "linkedin": "https://linkedin.com/in/priyasharma",
+  "github": "https://github.com/priyasharma",
+  "_meta": {
+    "source_file": "priya_sharma_resume.docx",
+    "extracted_at": "2026-09-02T00:48:09.223101Z",
+    "characters_extracted": 747
+  }
+}

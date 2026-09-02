@@ -1,0 +1,50 @@
+{
+  "name": "Arjun Verma",
+  "email": "arjun.verma@techmail.com",
+  "phone": "+1-415-555-0132",
+  "skills": [
+    "AWS",
+    "Azure",
+    "CI/CD",
+    "DevOps",
+    "Docker",
+    "Go",
+    "Java",
+    "Jenkins",
+    "Kubernetes",
+    "Microservices",
+    "MongoDB",
+    "Redis",
+    "System Design",
+    "Terraform"
+  ],
+  "education": [
+    {
+      "degree": "B.E. in Information Technology",
+      "institution": "University of Mumbai",
+      "year": "2015"
+    }
+  ],
+  "experience": [
+    {
+      "role_or_header": "Backend Engineer, CloudNet Systems (2019 - Present)",
+      "details": [
+        "Designed microservices architecture serving 2M+ requests/day",
+        "Migrated legacy systems to AWS, cutting infra costs by 30%"
+      ]
+    },
+    {
+      "role_or_header": "DevOps Intern, StartUpX (2018 - 2019)",
+      "details": [
+        "Automated CI/CD pipelines using Jenkins and Docker"
+      ]
+    }
+  ],
+  "linkedin": "https://linkedin.com/in/arjunverma",
+  "github": "https://github.com/arjunverma",
+  "_meta": {
+    "source_file": "arjun_verma_resume.pdf",
+    "extracted_at": "2026-09-02T00:48:09.211432Z",
+    "characters_extracted": 680
+  }
+}

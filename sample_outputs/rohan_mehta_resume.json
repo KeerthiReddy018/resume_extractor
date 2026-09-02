@@ -1,0 +1,49 @@
+{
+  "name": "Rohan Mehta",
+  "email": "rohan.mehta.ds@outlook.com",
+  "phone": "(022) 4567-8901",
+  "skills": [
+    "Data Science",
+    "Deep Learning",
+    "Machine Learning",
+    "NLP",
+    "NumPy",
+    "Pandas",
+    "PyTorch",
+    "Python",
+    "R",
+    "SQL",
+    "Statistics",
+    "Tableau",
+    "TensorFlow",
+    "scikit-learn"
+  ],
+  "education": [
+    {
+      "degree": "M.Sc in Data Science",
+      "institution": "University of Pune, 2021",
+      "year": "2021"
+    },
+    {
+      "degree": "B.Sc in Statistics",
+      "institution": "Fergusson College, 2019",
+      "year": "2019"
+    }
+  ],
+  "experience": [
+    {
+      "role_or_header": "Data Scientist - Analytics Corp (2021 - Present)",
+      "details": [
+        "Built churn prediction models improving retention by 15%",
+        "Deployed NLP pipeline for customer feedback classification"
+      ]
+    }
+  ],
+  "linkedin": null,
+  "github": "https://github.com/rohanmehta",
+  "_meta": {
+    "source_file": "rohan_mehta_resume.docx",
+    "extracted_at": "2026-09-02T00:48:09.245912Z",
+    "characters_extracted": 596
+  }
+}

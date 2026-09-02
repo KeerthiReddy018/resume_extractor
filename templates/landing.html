@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Extraction System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='landing.css') }}">
+</head>
+<body>
+
+<div class="land">
+
+  <nav class="land-nav">
+    <div class="land-nav__mark" aria-hidden="true">
+      <svg viewBox="0 0 40 40" fill="none">
+        <rect x="1" y="1" width="38" height="38" rx="7" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M12 14h16M12 20h16M12 26h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <span class="land-nav__name">Resume Extraction System</span>
+  </nav>
+
+  <section class="hero">
+    <p class="hero__kicker">Rule-based &middot; runs locally &middot;</p>
+    <h1 class="hero__title">Turn resumes into<br>structured data.</h1>
+    <p class="hero__sub">
+      Upload a PDF or DOCX resume and get back clean, structured JSON &mdash;
+      name, contact details, skills, education and experience &mdash; parsed
+      with regex and section detection.
+    </p>
+    <a href="/extract" class="hero__cta">
+      Get started
+      <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0-4.5-4.5M16 10l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+  <section class="fields">
+    <div class="fields__col">
+      <p class="fields__label">Always extracted</p>
+      <ul class="fields__list">
+        <li>Full name</li>
+        <li>Email address</li>
+        <li>Phone number</li>
+        <li>Skills</li>
+      </ul>
+    </div>
+    <div class="fields__col">
+      <p class="fields__label">Extracted when present</p>
+      <ul class="fields__list">
+        <li>Education</li>
+        <li>Work experience</li>
+        <li>LinkedIn profile</li>
+        <li>GitHub profile</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="land-foot">
+    <span>No resume content ever leaves this app &mdash; extraction is regex and rule-based.</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
